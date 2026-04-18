@@ -289,7 +289,7 @@ const initThree = () => {
   // 加载模型
   loader = new GLTFLoader()
   loader.load(
-    'http://s2b2c-prod.oss-cn-shenzhen.aliyuncs.com/0000/file/apk/map.glb',
+    'https://s2b2c-prod.oss-cn-shenzhen.aliyuncs.com/0000/file/apk/map.glb',
     (gltf) => {
       const model = gltf.scene
 
