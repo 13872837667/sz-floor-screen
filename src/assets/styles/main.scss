@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+.screen-wrapper {
+  width: 1920px;
+  height: 1080px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  background-color: #030a12;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 背景图层 */
+.screen-bg {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 100px);
+  z-index: 0;
+  pointer-events: none;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 10px;    /* 上间距 */
+    left: 10px;   /* 左间距 */
+    right: 10px;  /* 右间距 */
+    bottom: 10px; /* 下间距 */
+    background: url('http://s2b2c-prod.oss-cn-shenzhen.aliyuncs.com/0000/file/wmsImg/boder_bg.png') no-repeat;
+    background-size: 100% 100%;
+  }
+}
